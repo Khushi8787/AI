@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Safety Verification – GLAMORA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">GLAM<span>ORA</span></a>
+      <div class="nav-links"><a href="admin.html" class="active">Admin Panel</a></div>
+      <div class="nav-actions"><a href="login.html" class="nav-icon"><i class="fas fa-sign-out-alt"></i></a></div>
+    </div>
+  </nav>
+
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <a href="admin.html"><i class="fas fa-th-large"></i> Dashboard</a>
+        <a href="admin-products.html"><i class="fas fa-box"></i> Products</a>
+        <a href="admin-verification.html" class="active"><i class="fas fa-shield-alt"></i> Safety Verification</a>
+        <a href="admin-inventory.html"><i class="fas fa-warehouse"></i> Inventory</a>
+        <a href="admin-orders.html"><i class="fas fa-shopping-bag"></i> Orders</a>
+        <a href="admin-orders.html#rentals"><i class="fas fa-sync-alt"></i> Rentals</a>
+        <a href="admin-billing.html"><i class="fas fa-file-invoice"></i> Billing</a>
+        <a href="admin-reports.html"><i class="fas fa-chart-bar"></i> Reports</a>
+        <a href="#"><i class="fas fa-users"></i> Customers</a>
+      </nav>
+    </aside>
+
+    <main class="dashboard-content">
+      <h1>SAFETY VERIFICATION</h1>
+      <p class="page-desc">Review and approve product submissions before marketplace listing</p>
+
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('pending')">Pending (3)</button>
+        <button class="tab" onclick="showTab('approved')">Approved</button>
+        <button class="tab" onclick="showTab('rejected')">Rejected</button>
+        <button class="tab" onclick="showTab('moreinfo')">More Information</button>
+      </div>
+
+      <!-- PENDING -->
+      <div id="tab-pending"><div id="pendingList">
+        <!-- Request 1 -->
+        <div class="verification-request">
+          <div class="req-header">
+            <div>
+              <h3 style="font-size:18px;margin-bottom:4px;">Gold Hoop Earrings</h3>
+              <p style="font-size:13px;color:var(--text-muted);">Seller: Priya Sharma · Jewellery · Submitted: 22 Sep 2026</p>
+            </div>
+            <span class="status-pill status-pending">Pending</span>
+          </div>
+          <div class="req-images">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=100&h=100&fit=crop" alt="img1">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=100&h=100&fit=crop" alt="img2">
+          </div>
+          <div class="detail-meta" style="margin-bottom:16px;">
+            <div class="meta-item"><strong>Condition</strong> Excellent</div>
+            <div class="meta-item"><strong>Purchase Date</strong> Mar 2025</div>
+            <div class="meta-item"><strong>Expected Price</strong> ₹1,200</div>
+            <div class="meta-item"><strong>Category</strong> Jewellery</div>
+          </div>
+          <div class="checklist">
+            <label><input type="checkbox"> Product Information</label>
+            <label><input type="checkbox"> Images</label>
+            <label><input type="checkbox"> Condition</label>
+            <label><input type="checkbox"> Seller Information</label>
+          </div>
+          <div class="req-actions">
+            <button class="btn btn-success btn-sm" onclick="approveItem(this)">APPROVE</button>
+            <button class="btn btn-danger btn-sm" onclick="rejectItem(this)">REJECT</button>
+            <button class="btn btn-outline-gold btn-sm">REQUEST MORE INFO</button>
+          </div>
+        </div>
+
+        <!-- Request 2 - Cosmetic with expiry -->
+        <div class="verification-request">
+          <div class="req-header">
+            <div>
+              <h3 style="font-size:18px;margin-bottom:4px;">Hydrating Face Cream</h3>
+              <p style="font-size:13px;color:var(--text-muted);">Seller: Ananya Mehta · Skincare · Submitted: 24 Sep 2026</p>
+            </div>
+            <span class="status-pill status-pending">Pending</span>
+          </div>
+          <div class="req-images">
+            <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=100&h=100&fit=crop" alt="img1">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=100&h=100&fit=crop" alt="img2">
+          </div>
+          <div class="detail-meta" style="margin-bottom:16px;">
+            <div class="meta-item"><strong>Condition</strong> Good</div>
+            <div class="meta-item"><strong>Purchase Date</strong> Jan 2026</div>
+            <div class="meta-item"><strong>Expiry Date</strong> Jun 2027</div>
+            <div class="meta-item"><strong>Expected Price</strong> ₹650</div>
+          </div>
+          <div class="checklist">
+            <label><input type="checkbox"> Product Information</label>
+            <label><input type="checkbox"> Images</label>
+            <label><input type="checkbox"> Condition</label>
+            <label><input type="checkbox"> Expiry Date</label>
+            <label><input type="checkbox"> Seller Information</label>
+          </div>
+          <div class="req-actions">
+            <button class="btn btn-success btn-sm" onclick="approveItem(this)">APPROVE</button>
+            <button class="btn btn-danger btn-sm" onclick="rejectItem(this)">REJECT</button>
+            <button class="btn btn-outline-gold btn-sm">REQUEST MORE INFO</button>
+          </div>
+        </div>
+
+        <!-- Request 3 - Expired -->
+        <div class="verification-request" style="border-color:var(--danger);">
+          <div class="req-header">
+            <div>
+              <h3 style="font-size:18px;margin-bottom:4px;">Matte Lipstick Kit</h3>
+              <p style="font-size:13px;color:var(--text-muted);">Seller: Riya Kapoor · Makeup · Submitted: 20 Sep 2026</p>
+            </div>
+            <span class="status-pill status-rejected">EXPIRED</span>
+          </div>
+          <div class="alert alert-danger">
+            <i class="fas fa-ban"></i>
+            <div>
+              <strong>EXPIRED PRODUCT</strong><br>
+              Expiry Date: Aug 2025 — This product cannot be approved for resale.
+            </div>
+          </div>
+          <div class="detail-meta" style="margin-bottom:16px;">
+            <div class="meta-item"><strong>Condition</strong> Fair</div>
+            <div class="meta-item"><strong>Expiry Date</strong> <span class="text-danger">Aug 2025 (Expired)</span></div>
+            <div class="meta-item"><strong>Expected Price</strong> ₹399</div>
+            <div class="meta-item"><strong>Category</strong> Makeup</div>
+          </div>
+          <div class="req-actions">
+            <button class="btn btn-danger btn-sm" disabled>CANNOT APPROVE — EXPIRED</button>
+            <button class="btn btn-danger btn-sm" onclick="rejectItem(this)">REJECT</button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- APPROVED TAB -->
+      <div id="tab-approved" style="display:none;">
+        <div class="verification-request">
+          <div class="req-header">
+            <div>
+              <h3 style="font-size:18px;">Vitamin C Serum</h3>
+              <p style="font-size:13px;color:var(--text-muted);">Seller: Priya Sharma · Approved: 19 Sep 2026</p>
+            </div>
+            <div class="verified-badge"><i class="fas fa-check-circle"></i> GLAMORA VERIFIED ✓</div>
+          </div>
+          <div class="verified-details">
+            <ul>
+              <li>Safety Checked</li>
+              <li>Condition Verified</li>
+              <li>Product Information Verified</li>
+              <li>Expiry Verified ✓</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- REJECTED TAB -->
+      <div id="tab-rejected" style="display:none;">
+        <div class="empty-state">
+          <i class="fas fa-times-circle"></i>
+          <p>No rejected items in this view. Rejected items appear here with reason.</p>
+        </div>
+      </div>
+
+      <!-- MORE INFO TAB -->
+      <div id="tab-moreinfo" style="display:none;">
+        <div class="verification-request">
+          <div class="req-header">
+            <div>
+              <h3 style="font-size:18px;">Silk Scrunchie Set</h3>
+              <p style="font-size:13px;color:var(--text-muted);">Seller: Neha R. · Requested more images</p>
+            </div>
+            <span class="status-pill status-info">More Info Required</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function showTab(name) {
+      ['pending','approved','rejected','moreinfo'].forEach(t => {
+        document.getElementById('tab-' + t).style.display = t === name ? 'block' : 'none';
+      });
+      document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+    function approveItem(btn) {
+      const card = btn.closest('.verification-request');
+      card.innerHTML = '<div class="alert alert-success"><i class="fas fa-check-circle"></i> <div><strong>APPROVED</strong> — GLAMORA VERIFIED ✓<br>Safety Checked · Condition Verified · Product Information Verified</div></div>';
+    }
+    function rejectItem(btn) {
+      const card = btn.closest('.verification-request');
+      card.innerHTML = '<div class="alert alert-danger"><i class="fas fa-times-circle"></i> <div><strong>REJECTED</strong><br><div class="form-group mt-2"><label>Rejection Reason</label><textarea placeholder="Enter reason..."></textarea></div></div></div>';
+    }
+  </script>
+</body>
+</html>

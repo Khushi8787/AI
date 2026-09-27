@@ -1,0 +1,8 @@
+{
+  "name": "glamora-marketplace",
+  "version": "2.0.0",
+  "private": true,
+  "description": "GLAMORA Beauty & Jewellery Marketplace with a Node.js + SQLite backend",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "dev": "node --watch server.js" }
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders & Rentals – GLAMORA Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">GLAM<span>ORA</span></a>
+      <div class="nav-links"><a href="admin.html" class="active">Admin Panel</a></div>
+      <div class="nav-actions"><a href="login.html" class="nav-icon"><i class="fas fa-sign-out-alt"></i></a></div>
+    </div>
+  </nav>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <a href="admin.html"><i class="fas fa-th-large"></i> Dashboard</a>
+        <a href="admin-products.html"><i class="fas fa-box"></i> Products</a>
+        <a href="admin-verification.html"><i class="fas fa-shield-alt"></i> Safety Verification</a>
+        <a href="admin-inventory.html"><i class="fas fa-warehouse"></i> Inventory</a>
+        <a href="admin-orders.html" class="active"><i class="fas fa-shopping-bag"></i> Orders</a>
+        <a href="admin-billing.html"><i class="fas fa-file-invoice"></i> Billing</a>
+        <a href="admin-reports.html"><i class="fas fa-chart-bar"></i> Reports</a>
+      </nav>
+    </aside>
+    <main class="dashboard-content">
+      <h1>Orders & Rentals Management</h1>
+      <p class="page-desc">Manage buy orders and rental bookings</p>
+
+      <div class="tabs">
+        <button class="tab active" onclick="showOrderTab('orders')">ORDERS</button>
+        <button class="tab" onclick="showOrderTab('rentals')">RENTALS</button>
+      </div>
+
+      <div id="tab-orders">
+        <div class="table-card">
+          <div class="table-header"><h3>Buy Orders</h3></div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Product</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GLM-0847</td>
+                <td>Priya Sharma</td>
+                <td>Rose Gold Lipstick Set</td>
+                <td>₹1,299</td>
+                <td>26 Sep 2026</td>
+                <td><span class="status-pill status-shipped">Shipped</span></td>
+              </tr>
+              <tr>
+                <td>GLM-0845</td>
+                <td>Riya Kapoor</td>
+                <td>Vitamin C Serum</td>
+                <td>₹849</td>
+                <td>25 Sep 2026</td>
+                <td><span class="status-pill status-delivered">Delivered</span></td>
+              </tr>
+              <tr>
+                <td>GLM-0843</td>
+                <td>Ananya Mehta</td>
+                <td>Nude Eyeshadow Palette</td>
+                <td>₹1,899</td>
+                <td>24 Sep 2026</td>
+                <td><span class="status-pill status-pending">Pending</span></td>
+              </tr>
+              <tr>
+                <td>GLM-0840</td>
+                <td>Neha R.</td>
+                <td>Argan Hair Serum</td>
+                <td>₹699</td>
+                <td>23 Sep 2026</td>
+                <td><span class="status-pill status-approved">Confirmed</span></td>
+              </tr>
+              <tr>
+                <td>GLM-0838</td>
+                <td>Sneha P.</td>
+                <td>18K Gold Ring</td>
+                <td>₹4,500</td>
+                <td>22 Sep 2026</td>
+                <td><span class="status-pill status-shipped">Packed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="tab-rentals" style="display:none;">
+        <div class="table-card">
+          <div class="table-header"><h3>Rental Bookings</h3></div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Rental ID</th>
+                <th>Customer</th>
+                <th>Product</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Rental Fee</th>
+                <th>Deposit</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>RNT-0312</td>
+                <td>Priya Sharma</td>
+                <td>Pearl Drop Earrings</td>
+                <td>12 Oct</td>
+                <td>15 Oct</td>
+                <td>₹597</td>
+                <td>₹500</td>
+                <td><span class="status-pill status-active">Active</span></td>
+              </tr>
+              <tr>
+                <td>RNT-0310</td>
+                <td>Ananya Mehta</td>
+                <td>Bridal Kundan Set</td>
+                <td>10 Oct</td>
+                <td>14 Oct</td>
+                <td>₹2,396</td>
+                <td>₹2,000</td>
+                <td><span class="status-pill status-approved">Confirmed</span></td>
+              </tr>
+              <tr>
+                <td>RNT-0305</td>
+                <td>Riya Kapoor</td>
+                <td>Crystal Party Necklace</td>
+                <td>05 Oct</td>
+                <td>07 Oct</td>
+                <td>₹897</td>
+                <td>₹800</td>
+                <td><span class="status-pill status-pending">Requested</span></td>
+              </tr>
+              <tr>
+                <td>RNT-0298</td>
+                <td>Neha R.</td>
+                <td>Chandelier Earrings</td>
+                <td>01 Sep</td>
+                <td>03 Sep</td>
+                <td>₹1,197</td>
+                <td>₹1,500</td>
+                <td><span class="status-pill status-completed">Completed</span></td>
+              </tr>
+              <tr>
+                <td>RNT-0290</td>
+                <td>Sneha P.</td>
+                <td>Antique Gold Bangles</td>
+                <td>28 Aug</td>
+                <td>30 Aug</td>
+                <td>₹1,047</td>
+                <td>₹1,200</td>
+                <td><span class="status-pill status-info">Return Due</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+  <script>
+    function showOrderTab(name) {
+      document.getElementById('tab-orders').style.display = name === 'orders' ? 'block' : 'none';
+      document.getElementById('tab-rentals').style.display = name === 'rentals' ? 'block' : 'none';
+      document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+    if (window.location.hash === '#rentals') {
+      showOrderTab('rentals');
+      document.querySelectorAll('.tab')[1].classList.add('active');
+      document.querySelectorAll('.tab')[0].classList.remove('active');
+    }
+  </script>
+</body>
+</html>

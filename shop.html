@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop – GLAMORA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">GLAM<span>ORA</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="rentals.html">Rent</a>
+        <a href="sell.html">Sell</a>
+        <a href="our-story.html">Our Story</a>
+      </div>
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon"><i class="fas fa-user"></i></a>
+        <a href="cart.html" class="nav-icon"><i class="fas fa-shopping-bag"></i><span class="badge">2</span></a>
+        <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> <span>/</span> <span>Shop</span>
+    </div>
+    <h1>Shop</h1>
+    <p>Discover beauty and jewellery — new, pre-owned & verified</p>
+  </div>
+
+  <div class="shop-layout">
+    <!-- FILTERS -->
+    <aside class="filters">
+      <h3>Filters</h3>
+      <div class="filter-group">
+        <label>Category</label>
+        <select>
+          <option value="">All Categories</option>
+          <option>Makeup</option>
+          <option>Skincare</option>
+          <option>Haircare</option>
+          <option>Fragrance</option>
+          <option>Jewellery</option>
+          <option>Jewellery Sets</option>
+          <option>Beauty Tools</option>
+          <option>Event Beauty Kits</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Price Range</label>
+        <select>
+          <option value="">Any Price</option>
+          <option>Under ₹500</option>
+          <option>₹500 – ₹1,000</option>
+          <option>₹1,000 – ₹2,500</option>
+          <option>Above ₹2,500</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Brand</label>
+        <select>
+          <option value="">All Brands</option>
+          <option>Luxe Beauty</option>
+          <option>Aura Jewels</option>
+          <option>Glow Lab</option>
+          <option>Royal Heritage</option>
+          <option>Velvet Skin</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Rating</label>
+        <select>
+          <option value="">Any Rating</option>
+          <option>4★ & above</option>
+          <option>3★ & above</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Type</label>
+        <div class="filter-checkboxes">
+          <label><input type="checkbox"> Buy</label>
+          <label><input type="checkbox"> Rent</label>
+        </div>
+      </div>
+      <div class="filter-group">
+        <label>Condition</label>
+        <div class="filter-checkboxes">
+          <label><input type="checkbox"> New</label>
+          <label><input type="checkbox"> Pre-owned</label>
+        </div>
+      </div>
+      <div class="filter-group">
+        <label>Availability</label>
+        <div class="filter-checkboxes">
+          <label><input type="checkbox"> In Stock</label>
+          <label><input type="checkbox"> Available for Rent</label>
+        </div>
+      </div>
+      <div class="filter-group">
+        <div class="filter-checkboxes">
+          <label><input type="checkbox" checked> Verified Only</label>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block btn-sm">Apply Filters</button>
+    </aside>
+
+    <!-- PRODUCTS -->
+    <div>
+      <div class="shop-toolbar">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search products...">
+        </div>
+        <select style="width:auto;padding:10px 16px;">
+          <option>Sort: Featured</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Rating</option>
+          <option>Newest</option>
+        </select>
+      </div>
+      <p class="text-muted mb-2" style="font-size:13px;">Showing 8 products</p>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop" alt="Rose Gold Lipstick">
+            <div class="product-badges">
+              <span class="badge-tag badge-buy">Buy</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Luxe Beauty</div>
+            <h3 class="product-name">Rose Gold Lipstick Set</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(128)</span></div>
+            <div class="product-price">₹1,299</div>
+            <div class="product-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View Details</a>
+              <button class="btn btn-primary btn-sm">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop" alt="Pearl Earrings">
+            <div class="product-badges">
+              <span class="badge-tag badge-rent">Rent</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Aura Jewels</div>
+            <h3 class="product-name">Pearl Drop Earrings</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(86)</span></div>
+            <div class="product-price">₹199 <span class="per-day">/ day</span></div>
+            <div class="product-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View Details</a>
+              <a href="rentals.html" class="btn btn-gold btn-sm">Rent Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&h=400&fit=crop" alt="Vitamin C Serum">
+            <div class="product-badges">
+              <span class="badge-tag badge-buy">Buy</span>
+              <span class="badge-tag badge-preowned">Pre-owned</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Glow Lab</div>
+            <h3 class="product-name">Vitamin C Serum</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(54)</span></div>
+            <div class="product-price">₹849 <span class="original">₹1,199</span></div>
+            <div class="product-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View Details</a>
+              <button class="btn btn-primary btn-sm">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop" alt="Bridal Set">
+            <div class="product-badges">
+              <span class="badge-tag badge-rent">Rent</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Royal Heritage</div>
+            <h3 class="product-name">Bridal Kundan Set</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(203)</span></div>
+            <div class="product-price">₹599 <span class="per-day">/ day</span></div>
+            <div class="product-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View Details</a>
+              <a href="rentals.html" class="btn btn-gold btn-sm">Rent Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc0?w=400&h=400&fit=crop" alt="Eyeshadow Palette">
+            <div class="product-badges">
+              <span class="badge-tag badge-buy">Buy</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Velvet Skin</div>
+            <h3 class="product-name">Nude Eyeshadow Palette</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(312)</span></div>
+            <div class="product-price">₹1,899</div>
+            <div class="product-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View Details</a>
+              <button class="btn btn-primary btn-sm">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop" alt="Gold Ring">
+            <div class="product-badges">
+              <span class="badge-tag badge-buy">Buy</span>
+              <span class="badge-tag badge-preowned">Pre-owned</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Aura Jewels</div>
+            <h3 class="product-name">18K Gold Statement Ring</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(41)</span></div>
+            <div class="product-price">₹4,500 <span class="original">₹6,200</span></div>
+            <div class="product-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View Details</a>
+              <button class="btn btn-primary btn-sm">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400&h=400&fit=crop" alt="Hair Serum">
+            <div class="product-badges">
+              <span class="badge-tag badge-buy">Buy</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Glow Lab</div>
+            <h3 class="product-name">Argan Hair Repair Serum</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(97)</span></div>
+            <div class="product-price">₹699</div>
+            <div class="product-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View Details</a>
+              <button class="btn btn-primary btn-sm">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop" alt="Party Necklace">
+            <div class="product-badges">
+              <span class="badge-tag badge-rent">Rent</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Royal Heritage</div>
+            <h3 class="product-name">Crystal Party Necklace</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(156)</span></div>
+            <div class="product-price">₹299 <span class="per-day">/ day</span></div>
+            <div class="product-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View Details</a>
+              <a href="rentals.html" class="btn btn-gold btn-sm">Rent Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">GLAM<span style="color:var(--champagne)">ORA</span></div>
+        <p>Premium beauty and jewellery marketplace. Buy. Sell. Rent. Verify. Reuse.</p>
+      </div>
+      <div><h4>Shop</h4><ul><li><a href="shop.html">All Products</a></li><li><a href="rentals.html">Rentals</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="our-story.html">Our Story</a></li><li><a href="verification.html">Safety Verification</a></li></ul></div>
+      <div><h4>Account</h4><ul><li><a href="login.html">Login</a></li><li><a href="dashboard.html">Dashboard</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 GLAMORA. All rights reserved.</span>
+      <span>BUY. SELL. RENT. VERIFY. REUSE.</span>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

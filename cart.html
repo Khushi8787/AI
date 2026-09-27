@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart & Checkout – GLAMORA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">GLAM<span>ORA</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="rentals.html">Rent</a>
+        <a href="sell.html">Sell</a>
+        <a href="our-story.html">Our Story</a>
+      </div>
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon"><i class="fas fa-user"></i></a>
+        <a href="cart.html" class="nav-icon"><i class="fas fa-shopping-bag"></i><span class="badge">2</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Cart & Checkout</h1>
+    <p>Review your items and complete your order</p>
+  </div>
+
+  <div id="cartView">
+    <div class="cart-layout">
+      <div class="cart-items">
+        <div style="padding:20px 24px;border-bottom:1px solid var(--border);">
+          <h3 style="font-size:16px;">Your Cart (2 items)</h3>
+        </div>
+        <!-- Buy Item -->
+        <div class="cart-item">
+          <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=100&h=100&fit=crop" alt="Lipstick">
+          <div class="cart-item-info">
+            <h4>Rose Gold Lipstick Set</h4>
+            <div class="brand">Luxe Beauty · <span class="badge-tag badge-verified" style="font-size:9px;">Verified ✓</span></div>
+            <div class="qty-selector" style="margin-bottom:0;">
+              <button>−</button>
+              <input type="number" value="1" readonly style="width:40px;">
+              <button>+</button>
+            </div>
+          </div>
+          <div class="item-price" style="text-align:right;">
+            <div style="font-weight:600;font-size:16px;">₹1,299</div>
+            <button style="background:none;border:none;color:var(--danger);font-size:12px;margin-top:8px;cursor:pointer;"><i class="fas fa-trash"></i> Remove</button>
+          </div>
+        </div>
+        <!-- Rent Item -->
+        <div class="cart-item">
+          <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=100&h=100&fit=crop" alt="Earrings">
+          <div class="cart-item-info">
+            <h4>Pearl Drop Earrings</h4>
+            <div class="brand">Aura Jewels · Rent · <span class="badge-tag badge-verified" style="font-size:9px;">Verified ✓</span></div>
+            <p style="font-size:12px;color:var(--text-muted);margin-top:4px;">3 days · 12 Oct – 15 Oct</p>
+          </div>
+          <div class="item-price" style="text-align:right;">
+            <div style="font-weight:600;font-size:16px;">₹597</div>
+            <div style="font-size:11px;color:var(--text-muted);">+ ₹500 deposit</div>
+            <button style="background:none;border:none;color:var(--danger);font-size:12px;margin-top:8px;cursor:pointer;"><i class="fas fa-trash"></i> Remove</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-summary">
+        <h3>Order Summary</h3>
+        <div class="summary-row"><span>Subtotal</span><span>₹1,896</span></div>
+        <div class="summary-row"><span>Rental Charges</span><span>₹597</span></div>
+        <div class="summary-row"><span>Security Deposit</span><span>₹500</span></div>
+        <div class="summary-row"><span>Delivery</span><span>₹49</span></div>
+        <div class="summary-row"><span>Discount</span><span class="text-success">−₹100</span></div>
+        <div class="summary-row total"><span>TOTAL</span><span>₹2,345</span></div>
+
+        <h4 style="font-size:14px;margin:24px 0 12px;letter-spacing:0.04em;">Customer Details</h4>
+        <div class="form-group"><input type="text" placeholder="Full Name"></div>
+        <div class="form-group"><input type="tel" placeholder="Mobile Number"></div>
+        <div class="form-group"><input type="text" placeholder="Address"></div>
+        <div class="form-row">
+          <div class="form-group"><input type="text" placeholder="City"></div>
+          <div class="form-group"><input type="text" placeholder="Pincode"></div>
+        </div>
+
+        <h4 style="font-size:14px;margin:20px 0 12px;letter-spacing:0.04em;">Payment</h4>
+        <div class="filter-checkboxes" style="margin-bottom:20px;">
+          <label><input type="radio" name="payment" checked> UPI</label>
+          <label><input type="radio" name="payment"> Card</label>
+          <label><input type="radio" name="payment"> Cash on Delivery</label>
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-block" onclick="placeOrder()">PLACE ORDER</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Confirmed -->
+  <div id="orderConfirmed" style="display:none;">
+    <div class="order-confirmed">
+      <div class="check-icon"><i class="fas fa-check"></i></div>
+      <h2>ORDER CONFIRMED ✓</h2>
+      <p class="text-muted">Thank you for shopping with GLAMORA</p>
+      <div class="form-card" style="max-width:400px;margin:24px auto;text-align:left;">
+        <div class="summary-row"><span>Order ID</span><span class="fw-600">GLM-2026-0847</span></div>
+        <div class="summary-row"><span>Items</span><span>2</span></div>
+        <div class="summary-row"><span>Total Paid</span><span class="fw-600">₹2,345</span></div>
+        <div class="summary-row"><span>Payment</span><span>UPI</span></div>
+      </div>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="dashboard.html" class="btn btn-primary">View Orders</a>
+        <a href="shop.html" class="btn btn-outline">Continue Shopping</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><div class="logo">GLAM<span style="color:var(--champagne)">ORA</span></div><p>Buy. Sell. Rent. Verify. Reuse.</p></div>
+      <div><h4>Shop</h4><ul><li><a href="shop.html">Shop</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="our-story.html">Our Story</a></li></ul></div>
+      <div><h4>Account</h4><ul><li><a href="dashboard.html">Dashboard</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 GLAMORA</span><span>BUY. SELL. RENT. VERIFY. REUSE.</span></div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    function placeOrder() {
+      document.getElementById('cartView').style.display = 'none';
+      document.getElementById('orderConfirmed').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

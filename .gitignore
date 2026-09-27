@@ -1,0 +1,3 @@
+/data/glamora.db
+/data/*.db-shm
+/data/*.db-wal

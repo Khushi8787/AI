@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports & Analytics – GLAMORA Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">GLAM<span>ORA</span></a>
+      <div class="nav-links"><a href="admin.html" class="active">Admin Panel</a></div>
+      <div class="nav-actions"><a href="login.html" class="nav-icon"><i class="fas fa-sign-out-alt"></i></a></div>
+    </div>
+  </nav>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <a href="admin.html"><i class="fas fa-th-large"></i> Dashboard</a>
+        <a href="admin-products.html"><i class="fas fa-box"></i> Products</a>
+        <a href="admin-verification.html"><i class="fas fa-shield-alt"></i> Safety Verification</a>
+        <a href="admin-inventory.html"><i class="fas fa-warehouse"></i> Inventory</a>
+        <a href="admin-orders.html"><i class="fas fa-shopping-bag"></i> Orders</a>
+        <a href="admin-billing.html"><i class="fas fa-file-invoice"></i> Billing</a>
+        <a href="admin-reports.html" class="active"><i class="fas fa-chart-bar"></i> Reports</a>
+      </nav>
+    </aside>
+    <main class="dashboard-content">
+      <h1>Reports & Analytics</h1>
+      <p class="page-desc">Marketplace performance insights</p>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-label">Daily Sales</div><div class="stat-value">₹18.4K</div></div>
+        <div class="stat-card"><div class="stat-label">Weekly Sales</div><div class="stat-value">₹1.12L</div></div>
+        <div class="stat-card"><div class="stat-label">Monthly Revenue</div><div class="stat-value">₹4.2L</div></div>
+        <div class="stat-card"><div class="stat-label">Buy Revenue</div><div class="stat-value">₹2.86L</div></div>
+        <div class="stat-card"><div class="stat-label">Rental Revenue</div><div class="stat-value">₹1.34L</div></div>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <h3>Weekly Sales Trend</h3>
+          <div class="chart-placeholder">
+            <div class="chart-bar" style="height:35%"></div>
+            <div class="chart-bar" style="height:55%"></div>
+            <div class="chart-bar" style="height:40%"></div>
+            <div class="chart-bar" style="height:70%"></div>
+            <div class="chart-bar" style="height:60%"></div>
+            <div class="chart-bar" style="height:85%"></div>
+            <div class="chart-bar" style="height:75%"></div>
+          </div>
+        </div>
+        <div class="chart-card">
+          <h3>Top Categories</h3>
+          <div style="padding:16px 0;">
+            <div style="display:flex;justify-content:space-between;margin-bottom:12px;font-size:13px;"><span>Jewellery</span><span>32%</span></div>
+            <div style="height:8px;background:var(--border);border-radius:4px;margin-bottom:16px;"><div style="width:32%;height:100%;background:var(--champagne);border-radius:4px;"></div></div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:12px;font-size:13px;"><span>Makeup</span><span>28%</span></div>
+            <div style="height:8px;background:var(--border);border-radius:4px;margin-bottom:16px;"><div style="width:28%;height:100%;background:var(--blush-dark);border-radius:4px;"></div></div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:12px;font-size:13px;"><span>Skincare</span><span>22%</span></div>
+            <div style="height:8px;background:var(--border);border-radius:4px;margin-bottom:16px;"><div style="width:22%;height:100%;background:var(--champagne);border-radius:4px;"></div></div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:12px;font-size:13px;"><span>Haircare</span><span>18%</span></div>
+            <div style="height:8px;background:var(--border);border-radius:4px;"><div style="width:18%;height:100%;background:var(--blush-dark);border-radius:4px;"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="table-card">
+        <div class="table-header"><h3>Top Products</h3></div>
+        <table class="data-table">
+          <thead><tr><th>Product</th><th>Category</th><th>Orders</th><th>Revenue</th></tr></thead>
+          <tbody>
+            <tr><td>Bridal Kundan Set (Rent)</td><td>Jewellery</td><td>48</td><td>₹28,752</td></tr>
+            <tr><td>Rose Gold Lipstick Set</td><td>Makeup</td><td>128</td><td>₹1,66,272</td></tr>
+            <tr><td>Pearl Drop Earrings (Rent)</td><td>Jewellery</td><td>86</td><td>₹17,114</td></tr>
+            <tr><td>Nude Eyeshadow Palette</td><td>Makeup</td><td>72</td><td>₹1,36,728</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-card">
+        <div class="table-header"><h3>Verification Statistics</h3></div>
+        <div class="stats-grid" style="padding:24px;">
+          <div class="stat-card"><div class="stat-label">Total Submitted</div><div class="stat-value">156</div></div>
+          <div class="stat-card"><div class="stat-label">Pending</div><div class="stat-value">12</div></div>
+          <div class="stat-card"><div class="stat-label">Approved</div><div class="stat-value">128</div></div>
+          <div class="stat-card"><div class="stat-label">Rejected</div><div class="stat-value">16</div></div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

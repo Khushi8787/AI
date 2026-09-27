@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management – GLAMORA Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">GLAM<span>ORA</span></a>
+      <div class="nav-links"><a href="admin.html" class="active">Admin Panel</a></div>
+      <div class="nav-actions"><a href="login.html" class="nav-icon"><i class="fas fa-sign-out-alt"></i></a></div>
+    </div>
+  </nav>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <a href="admin.html"><i class="fas fa-th-large"></i> Dashboard</a>
+        <a href="admin-products.html"><i class="fas fa-box"></i> Products</a>
+        <a href="admin-verification.html"><i class="fas fa-shield-alt"></i> Safety Verification</a>
+        <a href="admin-inventory.html" class="active"><i class="fas fa-warehouse"></i> Inventory</a>
+        <a href="admin-orders.html"><i class="fas fa-shopping-bag"></i> Orders</a>
+        <a href="admin-billing.html"><i class="fas fa-file-invoice"></i> Billing</a>
+        <a href="admin-reports.html"><i class="fas fa-chart-bar"></i> Reports</a>
+      </nav>
+    </aside>
+    <main class="dashboard-content">
+      <h1>INVENTORY MANAGEMENT</h1>
+      <p class="page-desc">Track stock, sales, rentals and returns</p>
+      <div class="table-card">
+        <div class="table-header">
+          <h3>Inventory Overview</h3>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Available Stock</th>
+              <th>Sold</th>
+              <th>Rented</th>
+              <th>Returned</th>
+              <th>Low Stock</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rose Gold Lipstick Set</td>
+              <td>Makeup</td>
+              <td>45</td>
+              <td>128</td>
+              <td>—</td>
+              <td>—</td>
+              <td>No</td>
+              <td><span class="status-pill status-approved">Available</span></td>
+            </tr>
+            <tr>
+              <td>Pearl Drop Earrings</td>
+              <td>Jewellery</td>
+              <td>6</td>
+              <td>—</td>
+              <td>2</td>
+              <td>12</td>
+              <td>Yes</td>
+              <td><span class="status-pill status-active">Rented</span></td>
+            </tr>
+            <tr>
+              <td>Bridal Kundan Set</td>
+              <td>Jewellery Sets</td>
+              <td>2</td>
+              <td>—</td>
+              <td>1</td>
+              <td>8</td>
+              <td>Yes</td>
+              <td><span class="status-pill status-active">Rented</span></td>
+            </tr>
+            <tr>
+              <td>Vitamin C Serum</td>
+              <td>Skincare</td>
+              <td>12</td>
+              <td>54</td>
+              <td>—</td>
+              <td>—</td>
+              <td>No</td>
+              <td><span class="status-pill status-approved">Available</span></td>
+            </tr>
+            <tr>
+              <td>Crystal Party Necklace</td>
+              <td>Jewellery</td>
+              <td>0</td>
+              <td>—</td>
+              <td>0</td>
+              <td>5</td>
+              <td>Yes</td>
+              <td><span class="status-pill status-rejected">Out of Stock</span></td>
+            </tr>
+            <tr>
+              <td>Bridal Makeup Tool Kit</td>
+              <td>Beauty Tools</td>
+              <td>4</td>
+              <td>—</td>
+              <td>1</td>
+              <td>3</td>
+              <td>No</td>
+              <td><span class="status-pill status-info">Maintenance</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-box mt-3">
+        <h4><i class="fas fa-info-circle"></i> Rental Inventory Notes</h4>
+        <p style="font-size:13px;">Rental products track Availability, Maintenance Status and Return Condition. Items under maintenance are temporarily unavailable for rent.</p>
+      </div>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

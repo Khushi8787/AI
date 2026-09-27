@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details – GLAMORA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">GLAM<span>ORA</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="rentals.html">Rent</a>
+        <a href="sell.html">Sell</a>
+        <a href="our-story.html">Our Story</a>
+      </div>
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon"><i class="fas fa-user"></i></a>
+        <a href="cart.html" class="nav-icon"><i class="fas fa-shopping-bag"></i><span class="badge">2</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header" style="padding:24px 5%;">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> <span>/</span> <a href="shop.html">Shop</a> <span>/</span> <span>Rose Gold Lipstick Set</span>
+    </div>
+  </div>
+
+  <div class="product-detail">
+    <div class="product-gallery">
+      <div class="gallery-main">
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&h=600&fit=crop" alt="Rose Gold Lipstick Set" id="mainImg">
+      </div>
+      <div class="gallery-thumbs">
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=100&h=100&fit=crop" class="active" alt="thumb1">
+        <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=100&h=100&fit=crop" alt="thumb2">
+        <img src="https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=100&h=100&fit=crop" alt="thumb3">
+      </div>
+    </div>
+
+    <div class="product-detail-info">
+      <div class="brand">Luxe Beauty</div>
+      <h1>Rose Gold Lipstick Set</h1>
+      <div class="product-rating" style="margin-bottom:8px;">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        <span style="color:var(--text-muted);margin-left:6px;">4.5 (128 reviews)</span>
+      </div>
+
+      <div class="verified-badge verified-badge-lg">
+        <i class="fas fa-check-circle"></i> GLAMORA VERIFIED ✓
+      </div>
+
+      <div class="verified-details">
+        <h4><i class="fas fa-shield-alt" style="color:var(--success)"></i> Safety Verification</h4>
+        <ul>
+          <li>Safety Checked</li>
+          <li>Condition Verified</li>
+          <li>Product Information Verified</li>
+          <li>Expiry Verified ✓ — Expiry Date: Dec 2027</li>
+        </ul>
+      </div>
+
+      <div class="price">₹1,299</div>
+
+      <p class="description">
+        A luxurious set of three rose-gold inspired lipsticks with long-lasting, creamy formula. Perfect for everyday glam and special occasions. Dermatologically tested and cruelty-free.
+      </p>
+
+      <div class="detail-meta">
+        <div class="meta-item"><strong>Category</strong> Makeup</div>
+        <div class="meta-item"><strong>Condition</strong> New</div>
+        <div class="meta-item"><strong>Brand</strong> Luxe Beauty</div>
+        <div class="meta-item"><strong>Seller</strong> GLAMORA Official</div>
+      </div>
+
+      <div class="qty-selector">
+        <button onclick="changeQty(-1)">−</button>
+        <input type="number" value="1" min="1" id="qty" readonly>
+        <button onclick="changeQty(1)">+</button>
+      </div>
+
+      <div class="detail-actions">
+        <button class="btn btn-primary btn-lg" onclick="location.href='cart.html'">Add to Cart</button>
+        <a href="cart.html" class="btn btn-gold btn-lg">Buy Now</a>
+        <button class="btn btn-outline btn-lg"><i class="far fa-heart"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rental Product Example Section -->
+  <div class="section" style="background:var(--ivory);">
+    <div class="container">
+      <h2 class="section-title" style="font-size:28px;">Also Available for Rent</h2>
+      <p class="section-subtitle">Reusable jewellery and event essentials</p>
+      <div class="product-grid" style="max-width:600px;margin:0 auto;">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop" alt="Pearl Earrings">
+            <div class="product-badges">
+              <span class="badge-tag badge-rent">Rent</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Aura Jewels</div>
+            <h3 class="product-name">Pearl Drop Earrings</h3>
+            <div class="product-price">₹199 <span class="per-day">/ day</span> · Deposit ₹500</div>
+            <div class="rental-options" style="margin-top:12px;">
+              <h4>Rental Options</h4>
+              <div class="form-row">
+                <div>
+                  <label>Start Date</label>
+                  <input type="date">
+                </div>
+                <div>
+                  <label>End Date</label>
+                  <input type="date">
+                </div>
+              </div>
+              <button class="btn btn-outline-gold btn-sm btn-block mb-1">Check Availability</button>
+              <a href="cart.html" class="btn btn-gold btn-sm btn-block">Rent Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><div class="logo">GLAM<span style="color:var(--champagne)">ORA</span></div><p>Buy. Sell. Rent. Verify. Reuse.</p></div>
+      <div><h4>Shop</h4><ul><li><a href="shop.html">All Products</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="our-story.html">Our Story</a></li></ul></div>
+      <div><h4>Account</h4><ul><li><a href="login.html">Login</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 GLAMORA</span><span>BUY. SELL. RENT. VERIFY. REUSE.</span></div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    function changeQty(d) {
+      const el = document.getElementById('qty');
+      let v = parseInt(el.value) + d;
+      if (v < 1) v = 1;
+      el.value = v;
+    }
+  </script>
+</body>
+</html>

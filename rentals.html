@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Marketplace – GLAMORA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">GLAM<span>ORA</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="rentals.html" class="active">Rent</a>
+        <a href="sell.html">Sell</a>
+        <a href="our-story.html">Our Story</a>
+      </div>
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon"><i class="fas fa-user"></i></a>
+        <a href="cart.html" class="nav-icon"><i class="fas fa-shopping-bag"></i><span class="badge">2</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Rentals</span></div>
+    <h1>Rental Marketplace</h1>
+    <p>Rent reusable jewellery and event beauty essentials — all GLAMORA Verified</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <!-- Categories -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:36px;">
+        <button class="btn btn-primary btn-sm">All</button>
+        <button class="btn btn-outline btn-sm">Bridal Jewellery</button>
+        <button class="btn btn-outline btn-sm">Party Jewellery</button>
+        <button class="btn btn-outline btn-sm">Jewellery Sets</button>
+        <button class="btn btn-outline btn-sm">Necklaces</button>
+        <button class="btn btn-outline btn-sm">Earrings</button>
+        <button class="btn btn-outline btn-sm">Beauty Tools</button>
+        <button class="btn btn-outline btn-sm">Event Beauty Essentials</button>
+        <button class="btn btn-outline btn-sm">Reusable Beauty Kits</button>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop" alt="Bridal Set">
+            <div class="product-badges">
+              <span class="badge-tag badge-rent">Rent</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Royal Heritage</div>
+            <h3 class="product-name">Bridal Kundan Necklace Set</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(203)</span></div>
+            <div class="product-price">₹599 <span class="per-day">/ day</span></div>
+            <p style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">Security Deposit: ₹2,000 · Available</p>
+            <div class="product-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View</a>
+              <button class="btn btn-gold btn-sm" onclick="openRentalModal()">Rent Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop" alt="Pearl Earrings">
+            <div class="product-badges">
+              <span class="badge-tag badge-rent">Rent</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Aura Jewels</div>
+            <h3 class="product-name">Pearl Drop Earrings</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(86)</span></div>
+            <div class="product-price">₹199 <span class="per-day">/ day</span></div>
+            <p style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">Security Deposit: ₹500 · Available</p>
+            <div class="product-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View</a>
+              <button class="btn btn-gold btn-sm" onclick="openRentalModal()">Rent Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop" alt="Party Necklace">
+            <div class="product-badges">
+              <span class="badge-tag badge-rent">Rent</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Royal Heritage</div>
+            <h3 class="product-name">Crystal Party Necklace</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(156)</span></div>
+            <div class="product-price">₹299 <span class="per-day">/ day</span></div>
+            <p style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">Security Deposit: ₹800 · Available</p>
+            <div class="product-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View</a>
+              <button class="btn btn-gold btn-sm" onclick="openRentalModal()">Rent Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop" alt="Gold Bangles">
+            <div class="product-badges">
+              <span class="badge-tag badge-rent">Rent</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Aura Jewels</div>
+            <h3 class="product-name">Antique Gold Bangle Set</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(72)</span></div>
+            <div class="product-price">₹349 <span class="per-day">/ day</span></div>
+            <p style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">Security Deposit: ₹1,200 · Available</p>
+            <div class="product-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View</a>
+              <button class="btn btn-gold btn-sm" onclick="openRentalModal()">Rent Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=400&h=400&fit=crop" alt="Beauty Kit">
+            <div class="product-badges">
+              <span class="badge-tag badge-rent">Rent</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Event Glow</div>
+            <h3 class="product-name">Bridal Makeup Tool Kit</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(45)</span></div>
+            <div class="product-price">₹249 <span class="per-day">/ day</span></div>
+            <p style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">Security Deposit: ₹1,000 · Available</p>
+            <div class="product-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View</a>
+              <button class="btn btn-gold btn-sm" onclick="openRentalModal()">Rent Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=400&h=400&fit=crop" alt="Chandelier Earrings">
+            <div class="product-badges">
+              <span class="badge-tag badge-rent">Rent</span>
+              <span class="badge-tag badge-verified">Verified ✓</span>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">Royal Heritage</div>
+            <h3 class="product-name">Chandelier Bridal Earrings</h3>
+            <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(118)</span></div>
+            <div class="product-price">₹399 <span class="per-day">/ day</span></div>
+            <p style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">Security Deposit: ₹1,500 · Available</p>
+            <div class="product-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View</a>
+              <button class="btn btn-gold btn-sm" onclick="openRentalModal()">Rent Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rental Modal -->
+  <div id="rentalModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:2000;align-items:center;justify-content:center;">
+    <div class="form-card" style="max-width:480px;margin:20px;max-height:90vh;overflow-y:auto;">
+      <h2 style="font-size:22px;">Rent This Item</h2>
+      <p class="form-sub">Select dates and confirm availability</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Start Date</label>
+          <input type="date" id="rentStart">
+        </div>
+        <div class="form-group">
+          <label>End Date</label>
+          <input type="date" id="rentEnd">
+        </div>
+      </div>
+      <button class="btn btn-outline-gold btn-block mb-2" onclick="checkAvailability()">Check Availability</button>
+      <div id="rentalSummary" style="display:none;">
+        <div class="info-box">
+          <h4>Rental Summary</h4>
+          <div class="summary-row"><span>Rental Duration</span><span id="rentDays">3 days</span></div>
+          <div class="summary-row"><span>Rental Fee</span><span id="rentFee">₹1,797</span></div>
+          <div class="summary-row"><span>Security Deposit</span><span>₹2,000</span></div>
+          <div class="summary-row total"><span>Total Amount</span><span id="rentTotal">₹3,797</span></div>
+        </div>
+        <a href="cart.html" class="btn btn-gold btn-block btn-lg">Rent Now</a>
+      </div>
+      <button class="btn btn-outline btn-block mt-2" onclick="closeRentalModal()">Cancel</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><div class="logo">GLAM<span style="color:var(--champagne)">ORA</span></div><p>Buy. Sell. Rent. Verify. Reuse.</p></div>
+      <div><h4>Shop</h4><ul><li><a href="shop.html">Shop</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="verification.html">Verification</a></li></ul></div>
+      <div><h4>Account</h4><ul><li><a href="dashboard.html">Dashboard</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 GLAMORA</span><span>BUY. SELL. RENT. VERIFY. REUSE.</span></div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    function openRentalModal() {
+      document.getElementById('rentalModal').style.display = 'flex';
+    }
+    function closeRentalModal() {
+      document.getElementById('rentalModal').style.display = 'none';
+      document.getElementById('rentalSummary').style.display = 'none';
+    }
+    function checkAvailability() {
+      document.getElementById('rentalSummary').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

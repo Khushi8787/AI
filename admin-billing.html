@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billing / Invoice – GLAMORA Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">GLAM<span>ORA</span></a>
+      <div class="nav-links"><a href="admin.html" class="active">Admin Panel</a></div>
+      <div class="nav-actions"><a href="login.html" class="nav-icon"><i class="fas fa-sign-out-alt"></i></a></div>
+    </div>
+  </nav>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <a href="admin.html"><i class="fas fa-th-large"></i> Dashboard</a>
+        <a href="admin-products.html"><i class="fas fa-box"></i> Products</a>
+        <a href="admin-verification.html"><i class="fas fa-shield-alt"></i> Safety Verification</a>
+        <a href="admin-inventory.html"><i class="fas fa-warehouse"></i> Inventory</a>
+        <a href="admin-orders.html"><i class="fas fa-shopping-bag"></i> Orders</a>
+        <a href="admin-billing.html" class="active"><i class="fas fa-file-invoice"></i> Billing</a>
+        <a href="admin-reports.html"><i class="fas fa-chart-bar"></i> Reports</a>
+      </nav>
+    </aside>
+    <main class="dashboard-content">
+      <h1>Billing / Invoice</h1>
+      <p class="page-desc">Generate and view invoices</p>
+
+      <div class="invoice">
+        <div class="invoice-header">
+          <div>
+            <div class="invoice-logo">GLAM<span style="color:var(--champagne)">ORA</span></div>
+            <p style="font-size:12px;color:var(--text-muted);margin-top:4px;">Beauty & Jewellery Marketplace</p>
+          </div>
+          <div class="invoice-meta">
+            <strong>INVOICE</strong>
+            <span>Invoice #: INV-2026-0847</span><br>
+            <span>Order Date: 26 Sep 2026</span><br>
+            <span>Order ID: GLM-2026-0847</span>
+          </div>
+        </div>
+
+        <div class="invoice-parties">
+          <div>
+            <h4>Bill To</h4>
+            <p style="font-size:14px;">
+              <strong>Priya Sharma</strong><br>
+              42, Rose Avenue, Koramangala<br>
+              Bengaluru, Karnataka – 560034<br>
+              +91 98765 43210
+            </p>
+          </div>
+          <div>
+            <h4>From</h4>
+            <p style="font-size:14px;">
+              <strong>GLAMORA</strong><br>
+              Beauty & Jewellery Marketplace<br>
+              support@glamora.in
+            </p>
+          </div>
+        </div>
+
+        <table class="invoice-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Type</th>
+              <th>Qty / Duration</th>
+              <th>Price</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rose Gold Lipstick Set</td>
+              <td>Buy</td>
+              <td>1</td>
+              <td>₹1,299</td>
+              <td>₹1,299</td>
+            </tr>
+            <tr>
+              <td>Pearl Drop Earrings</td>
+              <td>Rent</td>
+              <td>3 days</td>
+              <td>₹199/day</td>
+              <td>₹597</td>
+            </tr>
+            <tr>
+              <td>Security Deposit (Pearl Earrings)</td>
+              <td>Deposit</td>
+              <td>1</td>
+              <td>₹500</td>
+              <td>₹500</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="invoice-totals">
+          <div class="summary-row"><span>Subtotal</span><span>₹2,396</span></div>
+          <div class="summary-row"><span>Delivery</span><span>₹49</span></div>
+          <div class="summary-row"><span>Discount</span><span>−₹100</span></div>
+          <div class="summary-row"><span>Tax (GST 5%)</span><span>₹117</span></div>
+          <div class="summary-row total"><span>TOTAL</span><span>₹2,462</span></div>
+        </div>
+
+        <div style="margin-top:40px;padding-top:20px;border-top:1px solid var(--border);text-align:center;">
+          <p style="font-size:12px;color:var(--text-muted);">Thank you for choosing GLAMORA · BUY. SELL. RENT. VERIFY. REUSE.</p>
+          <button class="btn btn-primary btn-sm mt-2" onclick="window.print()">Print Invoice</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
